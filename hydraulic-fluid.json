@@ -1,0 +1,74 @@
+{
+	"title": "hydraulic-fluid",
+	"type": "object",
+	"properties": {
+		"fire-resistance": {
+			"type": "string",
+			"description": "relative value obtained through comparison; fluid-specific",
+			"values": ["Poor", "Fair", "Good", "Excellent"]
+		},
+		"viscosity-temp.-prop.": {
+			"type": "string",
+			"description": "relative value, better viscosity index means better lubricant",
+			"values": ["Poor", "Fair", "Good", "Excellent"]
+		},
+		"seal-compatibility": {
+			"type": "string",
+			"description": "relative value, higher the seal compatibility the better",
+			"values": ["Poor", "Fair", "Good", "Excellent"]
+		},
+		"lubricating-quality": {
+			"type": "string",
+			"description": "relative value, higher lubricating quality the better",
+			"values": ["Poor", "Fair", "Good", "Excellent"]
+		},
+		"max-temp.-range": {
+			"type": "number",
+			"description": "deg. C; maximum operable temperature range",
+			"minimum": "50",
+			"maximum": "65"
+		},
+		"flash-point": {
+			"type": "number",
+			"description": "deg. C; minimum temp. at which enough vapour is formed for ignition, lower flash point means more flammability",
+			"minimum": "150",
+			"maximum": "320"
+		},
+		"auto-ignition-temp.": {
+			"type": "number",
+			"description": "deg. C; measures ability to withstand overheating and contact with hot surfaces",
+			"minimum": "260",
+			"maximum": "400"
+		},
+		"heat-of-combustion": {
+			"type": "number",
+			"description": "higher heat of combustion indicates higher chance to spread; kJ/g H20(g)",
+			"minimum": "10",
+			"maximum": "50"
+		},
+		"flame-propagation-speed": {
+			"type": "integer",
+			"description": "cm/s; rate of expansion of flame front",
+			"minimum": "20",
+			"maximum": "100"
+		},
+		"spray-ignition-temp.": {
+			"type": "number",
+			"description": "deg. C; minimum oil temperature at 100 psig",
+			"minimum": "10",
+			"maximum": "50"
+		},
+		"spray-ignition-pressure": {
+			"type": "number",
+			"description": "psig; minimum oil pressure at 20 deg. C",
+			"minimum": "50",
+			"maximum": "200"
+		},
+		"relative-cost": {
+			"type": "number",
+			"description": "cost rel. to pet. hyd. fluid as 1",
+			"minimum": "1.0",
+			"maximum": "5.0"
+		}
+	}
+}
