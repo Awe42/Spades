@@ -1,0 +1,29 @@
+{
+	"title": "coal-mine",
+	"type": "object",
+	"properties": {
+		"percentage-inflammable-gas": {
+			"type": "number",
+			"description": "percentage of inflammable gas in general body of air",
+			"minimum": "0.0",
+			"maximum": "1.5"
+		},
+		"rate-emission-gas": {
+			"type": "integer",
+			"description": "rate of emission of gas in m^3/ton of coal raised",
+			"minimum": "0",
+			"maximum": "100"
+		},
+		"Number-of-fluids-used": {
+			"type": "integer",
+			"description": "Number-of-fluids-used",
+			"minimum": "3",
+			"maximum": "7"
+		},
+		"degree-of-gassiness": {
+			"type": "string",
+			"description": "degree of gassiness of a coal mine",
+			"values": ["I", "II", "III", "I & II", "I & III", "II & III", "I, II & III"]
+		}
+	}
+}

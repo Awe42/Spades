@@ -7,15 +7,14 @@ def parse_json(address):
     return data
 
 # address = str(input('Enter Address: '))
-address = 'hydraulic-fluid.json'
+address = 'updatedgassiness.json'
 schema = parse_json(address)
-
 properties = schema['properties']
 no_of_properties = len(properties)
 
 dataset_titles = []
 dataset_type = []
-dataset_values = ["Poor", "Fair", "Good", "Excellent"]
+dataset_values = ["I", "II", "III", "II", "III", "I & II", "I & III", "II & III", "I & II & III"]
 dataset_max = []
 dataset_min = []
 probability_weightage = []
@@ -35,9 +34,12 @@ for i in list(properties.keys()):
         dataset_min.append(int(properties[i]['minimum']))
         
 
+
+dataset = []
 n = len(dataset_titles)
-l = 50 #no. of fluids to be generated
-f = open('outpu.csv', 'w')
+#print(n)
+l = 5 #no. of mines to be generated
+f = open('updatedoutput1.csv', 'w')
 f.write("sl. no.")
 for i in range(n):
     f.write(","+dataset_titles[i])
@@ -45,10 +47,13 @@ for i in range(l):
     f.write('\n')
     f.write(str(i+1));
     for j in range(n):
-        if dataset_type[j] == 'number' or dataset_type[j] == 'integer':
+        if dataset_type[j] == 'integer':
             f.write(",")
             f.write(str(randint(dataset_min[j], dataset_max[j])))
-        elif dataset_type[j] == 'string':
+        elif dataset_type[j] == 'number':
+            f.write(",")
+            f.write(str(round(uniform(dataset_min[j], dataset_max[j]), 2)))
+        else:
             f.write(",")
             f.write(dataset_values[randint(0, len(dataset_values) - 1)])
 f.close()

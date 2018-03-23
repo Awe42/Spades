@@ -1,0 +1,16 @@
+{
+	"title": "interlink",
+	"type": "object",
+	"properties": {
+		"fluid-no.": {
+			"type": "number",
+			"description": "serial no. of hydraulic fluid used"
+		},
+		"usage %": {
+			"type": "number",
+			"description": "percentage of usage of the hydraulic fluid",
+			"minimum": "0.0",
+			"maximum": "100.0"
+		}
+	}
+}
